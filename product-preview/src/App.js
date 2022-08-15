@@ -2,10 +2,19 @@ import './App.css';
 import { BsFillCartPlusFill } from "react-icons/bs";
 
 function App() {
+
+  let device;
+
+  if(window.screen.availWidth > 375) {
+    device = "desktop";
+  } else {
+    device = "mobile";
+  }
+
   return (
     <div className="card">
 
-      <img className="card__img" src="./image-product-mobile.jpg" alt="product.jpg" />
+      <img className="card__img" src={`./image-product-${device}.jpg`} alt="product.jpg" />
 
       <div className="product">
         <small>perfume</small>
