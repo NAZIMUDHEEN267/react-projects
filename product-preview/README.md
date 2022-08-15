@@ -1,7 +1,7 @@
 # Frontend Mentor - Product preview card component
 This is a frontend mentor challenge. Challenge is a simple product preview card, include image and its details and a button to add cart
 
-![challenge.jpg](./public/image-product-desktop.jpg)
+![challenge.jpg](./design/desktop-preview.jpg)
 
 ## challenge 
 Mobile-first-view approach, used
