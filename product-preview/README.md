@@ -8,7 +8,9 @@ Mobile-first-view approach, used
 
 * react library
 * css 
+* BEM methodology
 * google fonts
+* react-icons
 * vercel (for hosting)
 
 ## What i Learned
