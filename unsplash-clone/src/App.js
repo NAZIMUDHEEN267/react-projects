@@ -17,7 +17,7 @@ import Nav from "./components/Nav";
       }
     }
 
-    // data();
+    data();
 
   return (
     <div className="app">

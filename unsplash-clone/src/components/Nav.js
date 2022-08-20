@@ -8,6 +8,8 @@ import { GrProjects } from "react-icons/gr";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { TiGroupOutline } from "react-icons/ti";
 import { AiOutlineTwitter, AiFillFacebook, AiOutlineInstagram } from "react-icons/ai";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+
 
 import { useState } from "react";
 
@@ -17,7 +19,7 @@ function Nav() {
 
   return (
     <header className="header">
-      <div className="nav">
+      <nav className="nav">
         <img className="nav__img" src={icon} alt="icon.png" />
         <div className="nav__search">
           <BiSearchAlt2 className="search__icon" />
@@ -94,7 +96,48 @@ function Nav() {
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
+
+      <nav className="nav-down">
+        <div className="user-nav">
+          <li>Editorial</li>
+          <li>Following</li>
+        </div>
+        <div className="nav-types">
+
+          {/* left arrow key */}
+          <span className="arrow left-arrow">
+            <MdKeyboardArrowLeft />
+          </span>
+
+          {/* categories links */}
+          <ul className="categories">
+            <li>Athletics</li>
+            <li>History</li>
+            <li>Arts & Culture</li>
+            <li>Spirituality</li>
+            <li>Animals</li>
+            <li>Travel</li>
+            <li>Interior</li>
+            <li>People</li>
+            <li>Health & Wellness</li>
+            <li>Food & Drink</li>
+            <li>Film</li>
+            <li>Fashion</li>
+            <li>Business & Work</li>
+            <li>Nature</li>
+            <li>Architecture</li>
+            <li>Texture & Patterns</li>
+            <li>Wallpaper</li>
+            <li>Events</li>
+          </ul>
+
+          {/* right arrow key */}
+          <span className="arrow right-arrow">
+            <MdKeyboardArrowRight />
+          </span>
+        </div>
+      </nav>
     </header>
   )
 }

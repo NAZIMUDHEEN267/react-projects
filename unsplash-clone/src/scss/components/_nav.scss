@@ -1,16 +1,16 @@
 @use "../helpers/1-helpers" as helper;
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 10vh;
-  padding: 10px 5px;
-  display: flex;
-  align-items: center;
   background-color: #fff;
 
   // main nav
   .nav {
     position: relative;
+    padding: 10px 15px;
     width: 100%;
     display: grid;
     grid-template-columns: 50px 5fr 3fr;
@@ -75,11 +75,13 @@
       }
     }
 
+    // bars links wil show user click
     .shadow {
       filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.3));
       position: absolute;
-      right: 1.2%;
-      top: 30px;
+      z-index: 2;
+      right: 1.8%;
+      top: 40px;
 
       .nav-bar__links {
         padding-top: 2.3rem;
@@ -117,6 +119,75 @@
             }
           }
         }
+      }
+    }
+  }
+
+  // down nav links shows categorized photos
+  .nav-down {
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    background-color: #fff;
+
+    .user-nav {
+      display: flex;
+      gap: 15px;
+      border-right: 2px solid rgba(0, 0, 0, 0.3);
+
+      :nth-child(2) {
+        padding-right: 1rem;
+      }
+    }
+
+    .nav-types {
+      position: relative;
+      overflow: hidden;
+
+      .categories {
+        display: flex;
+        gap: 25px;
+        overflow: scroll;
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        li {
+          white-space: nowrap;
+        }
+      }
+
+      // arrows for sliding functionality
+      .arrow {
+        position: absolute;
+        top: 0;
+        width: 10%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        color: #999;
+        cursor: pointer;
+
+        &:hover {
+          color: #444;
+        }
+      }
+
+      .right-arrow {
+        right: 0;
+        justify-content: end;
+        background: linear-gradient(to left, white 20%, transparent);
+      }
+
+      .left-arrow {
+        left: 0;
+        background: linear-gradient(to right, white 20%, transparent);
       }
     }
   }
