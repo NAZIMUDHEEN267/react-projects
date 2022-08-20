@@ -1,0 +1,20 @@
+
+@keyframes links {
+    0% {
+      opacity: 0;
+      width: 0px;
+      height: 0px;
+    } 50% {
+      opacity: .5;
+      width: 580px;
+      height: 270px;
+    } 80% {
+      opacity: .8;
+      width: 560px;
+      height: 250px;
+    } 100% {
+      opacity: 1;
+      width: 580px;
+      height: 270px;
+    }
+  }

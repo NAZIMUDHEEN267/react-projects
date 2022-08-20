@@ -1,0 +1,123 @@
+@use "../helpers/1-helpers" as helper;
+
+.header {
+  width: 100%;
+  height: 10vh;
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+  // main nav
+  .nav {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 5fr 3fr;
+
+    &__img {
+      align-self: center;
+    }
+
+    &__search {
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        .search__bar {
+          border: 1px solid #999;
+          border-left-color: transparent;
+        }
+        .search__icon {
+          border: 1px solid #999;
+          border-right-color: transparent;
+        }
+      }
+
+      .search__icon {
+        padding: 14px;
+        font-size: 2.9rem;
+        background-color: #eeee;
+        color: #555;
+        border: 1px solid transparent;
+        border-radius: 12px 0 0 12px;
+        transform: translateX(1px);
+        cursor: pointer;
+      }
+
+      .search__bar {
+        padding: 15px;
+        flex: 1;
+        background-color: #eeee;
+        outline: none;
+        border: 1px solid transparent;
+        border-radius: 0 12px 12px 0;
+      }
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      transition: color ease 1s;
+
+      :nth-child(5) :first-child {
+        background-color: red;
+        padding: 5px;
+        font-size: 2rem;
+        border-radius: 50%;
+        color: lighten($color: #000000, $amount: 65);
+        background-color: lighten($color: #000000, $amount: 80);
+      }
+
+      li:last-child {
+        font-size: 1.3rem;
+      }
+    }
+
+    .shadow {
+      filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.3));
+      position: absolute;
+      right: 1.2%;
+      top: 30px;
+
+      .nav-bar__links {
+        padding-top: 2.3rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 580px;
+        height: 370px;
+        text-transform: capitalize;
+        clip-path: polygon(96% 3%, 98% 0%, 100% 3%, 100% 100%, 0% 100%, 0% 5%);
+        background-color: #fff;
+        animation: links ease 0.5s forwards;
+
+        .links {
+          li {
+            padding: 0.2rem 0;
+          }
+
+          .main-link {
+            color: #000;
+            font-weight: 600;
+            cursor: auto;
+
+            span {
+              margin-left: 0.3rem;
+            }
+          }
+
+          .social-links {
+            display: flex;
+
+            li {
+              font-size: 1.1rem;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
