@@ -14,8 +14,31 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { useState } from "react";
 
 function Nav() {
+  
+  const items = [
+    'Athletics',
+    'History',
+    'Arts & Culture',
+    'Spirituality',
+    'Animals',
+    'Travel',
+    'Interior',
+    'People',
+    'Health & Wellness',
+    'Food & Drink',
+    'Film',
+    'Fashion',
+    'Business & Work',
+    'Nature',
+    'Architecture',
+    'Texture & Patterns',
+    'Wallpaper',
+    'Events',
+  ];
 
   const [click, setClick] = useState(false);
+  const [move, setMove] = useState('');
+  const [itemCount, setItemCount] = useState(items);
 
   return (
     <header className="header">
@@ -35,6 +58,7 @@ function Nav() {
           <li>
             <BsPersonFill />
           </li>
+          {/* nav-bars click event */}
           <li onClick={() => setClick(!click)}>
             <VscThreeBars />
           </li>
@@ -98,6 +122,7 @@ function Nav() {
         </div>
       </nav>
 
+      {/* nav down links */}
       <nav className="nav-down">
         <div className="user-nav">
           <li>Editorial</li>
@@ -106,34 +131,19 @@ function Nav() {
         <div className="nav-types">
 
           {/* left arrow key */}
-          <span className="arrow left-arrow">
+          <span className="arrow left-arrow" onClick={() => setMove('prev')}>
             <MdKeyboardArrowLeft />
           </span>
 
           {/* categories links */}
-          <ul className="categories">
-            <li>Athletics</li>
-            <li>History</li>
-            <li>Arts & Culture</li>
-            <li>Spirituality</li>
-            <li>Animals</li>
-            <li>Travel</li>
-            <li>Interior</li>
-            <li>People</li>
-            <li>Health & Wellness</li>
-            <li>Food & Drink</li>
-            <li>Film</li>
-            <li>Fashion</li>
-            <li>Business & Work</li>
-            <li>Nature</li>
-            <li>Architecture</li>
-            <li>Texture & Patterns</li>
-            <li>Wallpaper</li>
-            <li>Events</li>
+          <ul className="categories" >
+            {
+              itemCount.map((name, index) => <li key={String(index)}>{name}</li>)
+            }
           </ul>
 
           {/* right arrow key */}
-          <span className="arrow right-arrow">
+          <span className="arrow right-arrow" onClick={() => setMove('next')}>
             <MdKeyboardArrowRight />
           </span>
         </div>
