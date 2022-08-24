@@ -1,0 +1,17 @@
+ 
+@use "./mixin" as media;
+
+$white : #fff;
+
+$tablet: 768px;
+$mobile: 448px;
+$custom-size: 991px;
+
+$up: 13;
+$button-width: calc(calc(99vw - 50px ) / $up);
+$carousel-width: calc($button-width * 13);
+$carouselLeftMargin: calc(2vw - $carousel-width);
+
+@include media.custom {
+    $up: 20px;
+}

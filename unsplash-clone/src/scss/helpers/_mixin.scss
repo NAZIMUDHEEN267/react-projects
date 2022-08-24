@@ -1,7 +1,14 @@
 
+@use "./1-helpers" as var;
 
 @mixin tablet {
     @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin custom {
+    @media (max-width: var.$custom-size) {
         @content;
     }
 }

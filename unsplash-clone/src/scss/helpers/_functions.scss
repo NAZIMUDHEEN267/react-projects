@@ -1,0 +1,5 @@
+
+// color brightness delay function
+@function color-delay ($color, $value) {
+    @return lighten($color, $value);
+}
