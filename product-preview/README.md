@@ -24,7 +24,7 @@ I just want to focus on flex box layout in next some projects and react library 
 - [frontendmentor-resource](https://www.frontendmentor.io/resources)
 
 ## hosted 
-hosted in [vercel](https://)
+hosted in [vercel](https://product-card-ashy.vercel.app/)
 
 ## Author
 - Website - [Nazimudheenti](https://nazimudheenti-portfolio.netlify.app)
